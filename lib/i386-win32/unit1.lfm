@@ -1,0 +1,112 @@
+object Form1: TForm1
+  Left = 252
+  Height = 38
+  Top = 124
+  Width = 320
+  BorderStyle = bsDialog
+  Caption = 'Minesweeper by YA_'
+  ClientHeight = 38
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '1.4.4.0'
+  object new_game_button: TButton
+    Left = 5
+    Height = 30
+    Top = 5
+    Width = 43
+    Caption = 'New'
+    OnClick = new_game_buttonClick
+    TabOrder = 0
+  end
+  object LBaris: TLabel
+    Left = 56
+    Height = 17
+    Top = 3
+    Width = 32
+    Caption = 'Grid: '
+    Font.Height = -13
+    ParentColor = False
+    ParentFont = False
+  end
+  object LKolom: TLabel
+    Left = 112
+    Height = 17
+    Top = 3
+    Width = 6
+    Caption = 'x'
+    Font.Height = -13
+    ParentColor = False
+    ParentFont = False
+  end
+  object TBaris: TEdit
+    Left = 88
+    Height = 23
+    Top = 3
+    Width = 24
+    OnChange = TBarisChange
+    ParentFont = False
+    TabOrder = 1
+    Text = '8'
+  end
+  object TKolom: TEdit
+    Left = 120
+    Height = 23
+    Top = 3
+    Width = 24
+    OnChange = TKolomChange
+    TabOrder = 2
+    Text = '16'
+  end
+  object LMine: TLabel
+    Left = 144
+    Height = 17
+    Top = 3
+    Width = 45
+    Caption = '| Mines:'
+    Font.Height = -13
+    ParentColor = False
+    ParentFont = False
+  end
+  object TMine: TEdit
+    Left = 192
+    Height = 23
+    Top = 3
+    Width = 24
+    TabOrder = 3
+    Text = '32'
+  end
+  object LOpen: TLabel
+    Left = 224
+    Height = 17
+    Top = 3
+    Width = 52
+    Caption = '( 0 | 0 ) 0'
+    Font.Height = -13
+    ParentColor = False
+    ParentFont = False
+    OnClick = LOpenClick
+  end
+  object About: TLabel
+    Left = 58
+    Height = 12
+    Top = 24
+    Width = 257
+    Caption = 'This is a clone of Microsoft''s Minesweeper in Object Pascal by YA_'
+    Font.Height = -9
+    ParentColor = False
+    ParentFont = False
+  end
+  object LNomor: TLabel
+    Left = 296
+    Height = 15
+    Top = 5
+    Width = 5
+    Caption = '?'
+    ParentColor = False
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 192
+    top = 8
+  end
+end
