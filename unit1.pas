@@ -283,7 +283,6 @@ begin
       end;
       i := Mine;
       while (i>0) do begin
-         Randomize;
          rand := Random(baris*kolom);
          if (bom[rand] = false) then begin
             bom[rand] := true;
@@ -296,6 +295,7 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+   Randomize;
    timelps := -1;
    square_size := 24;
    LNomor.Caption := '';
